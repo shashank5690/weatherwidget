@@ -22,9 +22,19 @@ const App: React.FC = () => {
       const updateWeather = async () => {
         const data = await fetchWeatherData(selectedCity);
         setWeatherData(data);
-      };
+      }
+       
+      // call the async function
+      updateWeather();
 
 
+      // setInterval for updating data in 10mins
+      const intervalId = setInterval(updateWeather,60000);
+
+      return () => clearInterval(intervalId);
+      
+      }
+    },[selectedCity]);
 
   return (
     <Container maxWidth="sm">
