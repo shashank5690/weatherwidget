@@ -26,9 +26,9 @@ const App: React.FC = () => {
 
       updateWeather();
 
-      const intervalId = setInterval(updateWeather, 600000); // 600000 ms = 10 minutes
+      const intervalId = setInterval(updateWeather, 600000); 
 
-      return () => clearInterval(intervalId); // Cleanup interval on component unmount
+      return () => clearInterval(intervalId); 
     }
   }, [selectedCity]);
 
