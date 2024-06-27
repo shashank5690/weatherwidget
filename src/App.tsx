@@ -24,13 +24,7 @@ const App: React.FC = () => {
         setWeatherData(data);
       };
 
-      updateWeather();
 
-      const intervalId = setInterval(updateWeather, 600000); 
-
-      return () => clearInterval(intervalId); 
-    }
-  }, [selectedCity]);
 
   return (
     <Container maxWidth="sm">
